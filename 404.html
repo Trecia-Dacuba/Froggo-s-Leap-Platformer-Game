@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Froggo's Leap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background:#070e0a; color:#c8f0d8;
+      font-family:'Share Tech Mono','Courier New',monospace;
+      min-height:100vh;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      text-align:center; padding:40px;
+    }
+    .frog { font-size:64px; animation:bounce 0.9s ease-in-out infinite alternate; margin-bottom:20px; }
+    @keyframes bounce { 0%{transform:translateY(0);} 100%{transform:translateY(-16px);} }
+    h1 {
+      font-family:'Press Start 2P',monospace;
+      font-size:clamp(28px,5vw,52px);
+      color:#2ecc71;
+      text-shadow:0 0 20px #2ecc71,0 0 40px #1a8a44;
+      margin-bottom:10px;
+    }
+    .sub { color:#6a9a7a; font-size:13px; letter-spacing:4px; margin-bottom:40px; }
+    .msg { color:#6a9a7a; font-size:13px; line-height:2.2; margin-bottom:40px; }
+    .btn {
+      background:transparent; border:2px solid #2ecc71; color:#2ecc71;
+      font-family:'Share Tech Mono',monospace; font-size:14px;
+      letter-spacing:3px; padding:12px 32px; cursor:pointer;
+      text-decoration:none; display:inline-block;
+      transition:all 0.15s; border-radius:2px;
+      text-shadow:0 0 8px #2ecc71;
+    }
+    .btn:hover { background:#2ecc71; color:#070e0a; box-shadow:0 0 20px #2ecc71; text-shadow:none; }
+    /* Scanlines */
+    body::before {
+      content:''; position:fixed; inset:0; pointer-events:none; z-index:99;
+      background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.07) 2px,rgba(0,0,0,0.07) 4px);
+    }
+  </style>
+</head>
+<body>
+  <div class="frog">🐸</div>
+  <h1>404</h1>
+  <div class="sub">PAGE NOT FOUND</div>
+  <div class="msg">
+    Froggo looked everywhere...<br>
+    but this lily pad doesn't exist!
+  </div>
+  <a href="index.html" class="btn">← BACK TO HOME</a>
+</body>
+</html>
