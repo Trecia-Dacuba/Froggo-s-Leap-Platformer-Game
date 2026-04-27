@@ -1,0 +1,283 @@
+/* =========================================
+   FROGGO'S LEAP — Game Stylesheet
+   UPHSD CCS WST Final Project 2025
+   Group: Agban-Dacuba
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  touch-action: none;
+  user-select: none;
+}
+
+body {
+  background: #050a08;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+/* ── GAME WRAPPER ── */
+#wrap {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  border: 3px solid #2ecc71;
+  box-shadow: 0 0 40px #2ecc7166, 0 0 80px #1a8a4422;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+canvas {
+  display: block;
+}
+
+/* ── HUD (heads-up display) ── */
+#hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  pointer-events: none;
+  z-index: 10;
+  gap: 6px;
+}
+
+.hb {
+  background: rgba(0, 0, 0, 0.68);
+  border: 1.5px solid #2ecc71aa;
+  border-radius: 4px;
+  padding: 4px 10px;
+  color: #2ecc71;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px #2ecc71;
+  white-space: nowrap;
+}
+
+#flyHud {
+  color: #ffee44;
+  border-color: #ffee44aa;
+  text-shadow: 0 0 6px #ffee44;
+}
+
+#powerHud {
+  color: #ff88ff;
+  border-color: #ff88ffaa;
+  text-shadow: 0 0 6px #ff88ff;
+  display: none;
+}
+
+/* ── OVERLAY SCREENS (menu, level clear, win, game over) ── */
+#overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 8, 14, 0.93);
+  z-index: 30;
+  text-align: center;
+  padding: 20px;
+}
+
+#overlay h1 {
+  font-size: clamp(30px, 6vw, 52px);
+  color: #2ecc71;
+  text-shadow: 0 0 20px #2ecc71, 0 0 50px #1a8a44;
+  letter-spacing: 4px;
+  margin-bottom: 6px;
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+/* ── OVERLAY ELEMENTS ── */
+.sub {
+  color: #88ffbb;
+  font-size: 13px;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  opacity: 0.85;
+}
+
+.btn {
+  background: transparent;
+  border: 2px solid #2ecc71;
+  color: #2ecc71;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  letter-spacing: 3px;
+  padding: 11px 36px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.15s, box-shadow 0.15s, color 0.15s;
+  text-shadow: 0 0 8px #2ecc71;
+  box-shadow: 0 0 10px #2ecc7133;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  background: #2ecc71;
+  color: #050a08;
+  box-shadow: 0 0 24px #2ecc71;
+  text-shadow: none;
+}
+
+.instructions {
+  color: #55886a;
+  font-size: 11px;
+  line-height: 2.2;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.score-big {
+  font-size: clamp(36px, 8vw, 64px);
+  color: #2ecc71;
+  text-shadow: 0 0 30px #2ecc71;
+  margin: 8px 0;
+}
+
+.score-label {
+  color: #88ffbb;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.hi {
+  color: #ffcc44;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin: 6px 0 20px;
+  text-shadow: 0 0 8px #ffcc44;
+}
+
+.frog {
+  font-size: 38px;
+  animation: fbounce 0.8s ease-in-out infinite alternate;
+  margin-bottom: 8px;
+}
+
+/* Level clear specific */
+.lc-stars {
+  font-size: 28px;
+  letter-spacing: 8px;
+  margin: 8px 0;
+  animation: starSpin 1s ease-out;
+}
+
+.lc-bonus {
+  color: #ffee44;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #ffee44;
+}
+
+/* Win screen */
+.win-title {
+  font-size: clamp(22px, 4vw, 38px);
+  color: #ffcc44;
+  text-shadow: 0 0 20px #ffcc44, 0 0 40px #ff8800;
+  letter-spacing: 3px;
+  animation: glow2 2s infinite;
+}
+
+/* ── MOBILE D-PAD ── */
+#dpad {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 25;
+  pointer-events: none;
+}
+
+.dp {
+  background: rgba(0, 0, 0, 0.55);
+  border: 2px solid #2ecc7188;
+  border-radius: 8px;
+  color: #2ecc71;
+  font-size: 22px;
+  width: 68px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: all;
+  transition: background 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dp:active,
+.dp.pressed {
+  background: rgba(46, 204, 113, 0.28);
+  border-color: #2ecc71;
+}
+
+#dpad-move {
+  display: flex;
+  gap: 8px;
+}
+
+#dpad-jump {
+  margin-right: 4px;
+  width: 74px;
+  height: 74px;
+  font-size: 28px;
+  border-radius: 50%;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 20px #2ecc71, 0 0 40px #1a8a44; }
+  50%       { text-shadow: 0 0 35px #2ecc71, 0 0 70px #1a8a44, 0 0 100px #0d4422; }
+}
+
+@keyframes glow2 {
+  0%, 100% { text-shadow: 0 0 20px #ffcc44, 0 0 40px #ff8800; }
+  50%       { text-shadow: 0 0 40px #ffcc44, 0 0 80px #ff8800; }
+}
+
+@keyframes fbounce {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-12px); }
+}
+
+@keyframes starSpin {
+  0%   { opacity: 0; transform: scale(0.4) rotate(-20deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+/* ── RESPONSIVE / MOBILE ── */
+@media (max-width: 820px), (pointer: coarse) {
+  #dpad { display: flex; }
+
+  #wrap {
+    width: 100vw;
+    height: calc(100vw * 500 / 800);
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+}
