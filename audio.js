@@ -7,7 +7,7 @@
 
 let AC = null;
 
-/** Initialize AudioContext on first user interaction */
+/* Initialize AudioContext on first user interaction */
 function initAC() {
   if (!AC) {
     AC = new (window.AudioContext || window.webkitAudioContext)();
