@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FROGGO'S LEAP — UPHSD CCS Game Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAVIGATION
+     ══════════════════════════════════════ -->
+<nav>
+  <a href="#home" class="nav-logo">FROGGO</a>
+  <div class="nav-links">
+    <a href="#about">GAME</a>
+    <a href="#features">FEATURES</a>
+    <a href="#howtoplay">HOW TO PLAY</a>
+    <a href="#screenshots">SCREENSHOTS</a>
+    <a href="#team">TEAM</a>
+    <a href="#repo">REPO</a>
+  </div>
+  <div class="nav-badge">UPHSD CCS · 2025</div>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     HERO
+     ══════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-tag">WST FINAL PROJECT — 2ND YEAR IT GAME DEVELOPMENT</div>
+  <h1 class="hero-title">FROGGO'S<br>LEAP</h1>
+  <p class="hero-sub">A LILY PAD PLATFORMER</p>
+  <div class="hero-btns">
+    <a href="game/game.html" class="btn-primary">▶ PLAY NOW</a>
+    <a href="#howtoplay"    class="btn-secondary">HOW TO PLAY</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="val">3</div><div class="lbl">LEVELS</div></div>
+    <div class="hero-stat"><div class="val">5</div><div class="lbl">GAME FILES</div></div>
+    <div class="hero-stat"><div class="val">2</div><div class="lbl">DEVELOPERS</div></div>
+    <div class="hero-stat"><div class="val">14</div><div class="lbl">DAY SPRINT</div></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     ABOUT
+     ══════════════════════════════════════ -->
+<div id="about">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <div class="section-num">01</div>
+      <h2 class="section-title">ABOUT THE GAME</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          <span>Froggo's Leap</span> is an original HTML5 canvas platformer
+          built for the UPHSD College of Computer Studies WST Final Project.
+          Play as Froggo — a determined little frog in a tiny hat — leaping
+          across lily pads above a moonlit pond.
+        </p>
+        <p>
+          The game features a complete <span>game loop</span>: animated menu,
+          three handcrafted levels with escalating difficulty, a level-clear
+          screen, a You Win screen, and a Game Over screen with persistent
+          high-score tracking.
+        </p>
+        <p>
+          Built entirely in <span>vanilla JavaScript + HTML5 Canvas</span>
+          with procedurally generated chiptune BGM and Web Audio API
+          sound effects — zero external libraries, zero dependencies.
+        </p>
+        <a href="game/game.html" class="btn-primary" style="margin-top:8px; display:inline-block">▶ PLAY NOW</a>
+      </div>
+
+      <div class="about-screen reveal">
+        <div class="preview-art">
+          <div class="preview-water"></div>
+          <div class="preview-pad" style="width:110px;height:18px;bottom:50px;left:5%"></div>
+          <div class="preview-pad" style="width:100px;height:18px;bottom:66px;left:34%"></div>
+          <div class="preview-pad" style="width:115px;height:18px;bottom:57px;left:63%"></div>
+          <div class="preview-frog">🐸</div>
+          <div class="preview-fly"  style="left:42%;top:26px">🪰</div>
+          <div class="preview-fly"  style="left:72%;top:32px;animation-delay:0.6s">🪰</div>
+          <div style="position:absolute;right:10%;bottom:85px;font-size:24px;animation:heroFloat 2.2s infinite ease-in-out">🌸</div>
+          <div style="position:absolute;top:8px; left:10%;width:2px;height:2px;background:#ccffcc;opacity:0.7"></div>
+          <div style="position:absolute;top:20px;left:42%;width:2px;height:2px;background:#ccffcc;opacity:0.5"></div>
+          <div style="position:absolute;top:14px;right:22%;width:2px;height:2px;background:#ccffcc;opacity:0.7"></div>
+          <div style="position:absolute;top:36px;right:44%;width:2px;height:2px;background:#ccffcc;opacity:0.4"></div>
+        </div>
+        <div class="tech-pills">
+          <div class="tech-pill"><div class="tp-title">HTML5</div><div class="tp-sub">Canvas API</div></div>
+          <div class="tech-pill"><div class="tp-title">JS ES6</div><div class="tp-sub">Vanilla</div></div>
+          <div class="tech-pill"><div class="tp-title">WEB AUDIO</div><div class="tp-sub">API</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     FEATURES
+     ══════════════════════════════════════ -->
+<div id="features">
+  <div class="section-wrap" style="padding-top:0">
+    <div class="section-header reveal">
+      <div class="section-num">02</div>
+      <h2 class="section-title">GAME FEATURES</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">🎮</div>
+        <h3>COMPLETE GAME LOOP</h3>
+        <p>Animated title screen, 3 escalating levels, a level-clear screen, a You Win ending, and a Game Over screen — all with high-score tracking.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🎵</div>
+        <h3>CHIPTUNE AUDIO</h3>
+        <p>Unique BGM melody for each of the 3 levels generated via the Web Audio API, plus 10+ distinct sound effects for every game action.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🐸</div>
+        <h3>ANIMATED CHARACTER</h3>
+        <p>Froggo features squish-and-stretch physics, changing facial expressions, walking leg animation, directional flipping, and a tiny hat.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🌿</div>
+        <h3>DYNAMIC PLATFORMS</h3>
+        <p>Lily pads gently bob on water. Level 2 and 3 introduce moving platforms with clear visual indicators so you always know what's moving.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🐝</div>
+        <h3>ENEMY AI</h3>
+        <p>Hornets patrol their lily pads and scale in speed per level. Stomp them from above for bonus points, or avoid them carefully.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">⭐</div>
+        <h3>POWER-UPS</h3>
+        <p>Shield Stars absorb one hit, Mushrooms give a speed boost — both with on-screen timer bars so you always know how long they last.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🚩</div>
+        <h3>CHECKPOINTS</h3>
+        <p>Mid-level checkpoint flags save your progress. Dying respawns you at the last flag you touched — not back at the start of the level.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">✨</div>
+        <h3>PARTICLE EFFECTS</h3>
+        <p>Collectible bursts, stomp explosions, jump puffs, shield blocks, and floating score text all built with a custom particle engine.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🌄</div>
+        <h3>PARALLAX BACKGROUNDS</h3>
+        <p>Stars, moon, background trees, and clouds scroll at different depths creating a layered sense of 3D depth across all 3 unique level themes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     HOW TO PLAY
+     ══════════════════════════════════════ -->
+<div id="howtoplay">
+  <div class="section-wrap" style="padding-top:0">
+    <div class="section-header reveal">
+      <div class="section-num">03</div>
+      <h2 class="section-title">HOW TO PLAY</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="controls-grid">
+      <div class="reveal">
+        <div class="ctrl-group">
+          <h3>⌨ KEYBOARD CONTROLS</h3>
+          <div class="ctrl-item">
+            <div class="ctrl-key">← →</div>
+            <div class="ctrl-desc">Move Froggo left or right</div>
+          </div>
+          <div class="ctrl-item">
+            <div class="ctrl-key">SPACE</div>
+            <div class="ctrl-desc">Jump — press again mid-air for double jump</div>
+          </div>
+          <div class="ctrl-item">
+            <div class="ctrl-key">↑ / W</div>
+            <div class="ctrl-desc">Alternative jump key</div>
+          </div>
+          <div class="ctrl-item">
+            <div class="ctrl-key">A / D</div>
+            <div class="ctrl-desc">Alternative move left / right</div>
+          </div>
+          <div class="ctrl-item" style="border:none">
+            <div class="ctrl-key" style="font-size:8px">HOLD ↑</div>
+            <div class="ctrl-desc">Hold jump for higher arc, tap for short hop</div>
+          </div>
+        </div>
+        <br>
+        <div class="ctrl-group">
+          <h3>📱 MOBILE CONTROLS</h3>
+          <div class="ctrl-item">
+            <div class="ctrl-key">◀ ▶</div>
+            <div class="ctrl-desc">On-screen left / right buttons</div>
+          </div>
+          <div class="ctrl-item" style="border:none">
+            <div class="ctrl-key">▲</div>
+            <div class="ctrl-desc">On-screen jump button (circular)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="ctrl-group">
+          <h3>🏆 SCORING</h3>
+          <table class="scoring-table">
+            <thead>
+              <tr><th>ACTION</th><th>POINTS</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Collect a fly 🪰</td><td>+10</td></tr>
+              <tr><td>Stomp a hornet 🐝</td><td>+25</td></tr>
+              <tr><td>Reach the lotus 🌸</td><td>+100 base</td></tr>
+              <tr><td>Level bonus</td><td>+50 per level</td></tr>
+              <tr><td>Fly collection bonus</td><td>+5 per fly</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <div class="ctrl-group">
+          <h3>💡 TIPS</h3>
+          <div class="ctrl-item">
+            <div class="ctrl-desc" style="font-size:11px;color:var(--text-dim);line-height:2.2">
+              🐸 You have <strong style="color:var(--green)">3 lives</strong> — dying respawns at last checkpoint<br>
+              🌿 <strong style="color:var(--green)">Double jump</strong> = tap jump again while airborne<br>
+              🕐 <strong style="color:var(--green)">Coyote time</strong> = still jump just after walking off edge<br>
+              🐝 Stomp hornets by <strong style="color:var(--green)">falling on top</strong> of them<br>
+              ⭐ Shield absorbs <strong style="color:var(--green)">one hit</strong> from hornets or falling<br>
+              🚩 Touch <strong style="color:var(--green)">green flags</strong> to save your position
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     SCREENSHOTS
+     ══════════════════════════════════════ -->
+<div id="screenshots">
+  <div class="section-wrap" style="padding-top:0">
+    <div class="section-header reveal">
+      <div class="section-num">04</div>
+      <h2 class="section-title">SCREENSHOTS</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="screenshots-grid">
+      <!-- Replace placeholder divs with <img src="screenshots/menu.png"> etc after taking actual screenshots -->
+      <div class="screenshot-card reveal">
+        <div class="screenshot-placeholder">
+          🐸
+          <span>MENU SCREEN</span>
+        </div>
+        <div class="screenshot-label">Title / Menu Screen</div>
+      </div>
+      <div class="screenshot-card reveal">
+        <div class="screenshot-placeholder">
+          🌿
+          <span>LEVEL 1 — POND AT DUSK</span>
+        </div>
+        <div class="screenshot-label">Level 1 Gameplay</div>
+      </div>
+      <div class="screenshot-card reveal">
+        <div class="screenshot-placeholder">
+          🌙
+          <span>LEVEL 2 — MOONLIT MARSH</span>
+        </div>
+        <div class="screenshot-label">Level 2 Gameplay</div>
+      </div>
+      <div class="screenshot-card reveal">
+        <div class="screenshot-placeholder">
+          🌋
+          <span>LEVEL 3 — VOLCANIC SPRINGS</span>
+        </div>
+        <div class="screenshot-label">Level 3 Gameplay</div>
+      </div>
+      <div class="screenshot-card reveal">
+        <div class="screenshot-placeholder">
+          🏆
+          <span>YOU WIN SCREEN</span>
+        </div>
+        <div class="screenshot-label">Win / End Screen</div>
+      </div>
+      <div class="screenshot-card reveal">
+        <div class="screenshot-placeholder">
+          💀
+          <span>GAME OVER SCREEN</span>
+        </div>
+        <div class="screenshot-label">Game Over Screen</div>
+      </div>
+    </div>
+
+    <p style="color:var(--text-dim);font-size:11px;text-align:center;margin-top:24px;letter-spacing:2px">
+      → Replace placeholders with actual screenshots: save as <code style="color:var(--green)">screenshots/</code> folder in your repo
+    </p>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     TEAM
+     ══════════════════════════════════════ -->
+<div id="team">
+  <div class="section-wrap" style="padding-top:0">
+    <div class="section-header reveal">
+      <div class="section-num">05</div>
+      <h2 class="section-title">THE TEAM</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="team-grid">
+      <!-- ── Member 1: Agban ── -->
+      <div class="team-card reveal">
+        <div class="member-avatar">🐸</div>
+        <div class="member-name">AGBAN, [FIRST NAME]</div>
+        <div class="member-role">Game Developer · Lead Programmer</div>
+        <div class="member-desc">
+          Responsible for the core game engine, player physics, collision
+          detection, enemy AI patrol logic, and the Web Audio API chiptune
+          sound system. Handled all JavaScript architecture including the
+          game loop, state machine, and particle effects engine.
+        </div>
+        <div class="member-tags">
+          <span class="member-tag">GAME LOGIC</span>
+          <span class="member-tag">JS / CANVAS</span>
+          <span class="member-tag">PHYSICS</span>
+          <span class="member-tag">AUDIO</span>
+        </div>
+        <a href="https://github.com/YOUR-GITHUB-USERNAME-HERE" class="member-github" target="_blank" rel="noopener">
+          ⌥ github.com/agban
+        </a>
+      </div>
+
+      <!-- ── Member 2: Dacuba ── -->
+      <div class="team-card reveal">
+        <div class="member-avatar">🌸</div>
+        <div class="member-name">DACUBA, [FIRST NAME]</div>
+        <div class="member-role">Web Designer · Level Designer</div>
+        <div class="member-desc">
+          Responsible for the web portal design and CSS, level layout and
+          platform configurations, game art direction, and visual polish.
+          Handled GitHub Pages deployment, README documentation,
+          screenshot collection, and all UI/UX decisions.
+        </div>
+        <div class="member-tags">
+          <span class="member-tag">HTML / CSS</span>
+          <span class="member-tag">LEVEL DESIGN</span>
+          <span class="member-tag">UI / UX</span>
+          <span class="member-tag">DEPLOYMENT</span>
+        </div>
+        <a href="https://github.com/YOUR-GITHUB-USERNAME-HERE" class="member-github" target="_blank" rel="noopener">
+          ⌥ github.com/dacuba
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     REPO
+     ══════════════════════════════════════ -->
+<div id="repo">
+  <div class="section-wrap" style="padding-top:0">
+    <div class="section-header reveal">
+      <div class="section-num">06</div>
+      <h2 class="section-title">REPOSITORY</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="repo-card reveal">
+      <div>
+        <div class="repo-title">⌥ FROGGOS-LEAP</div>
+        <div class="repo-desc">
+          Original HTML5 platformer game built in a 14-day sprint for UPHSD CCS WST Final Project 2025.<br>
+          No libraries. No frameworks. Pure HTML5 Canvas + Vanilla JavaScript + Web Audio API.
+        </div>
+        <div class="repo-meta">
+          <div class="repo-badge">LANGUAGE: <span>JavaScript</span></div>
+          <div class="repo-badge">FILES: <span>5 source files</span></div>
+          <div class="repo-badge">BRANCH: <span>main</span></div>
+          <div class="repo-badge">LICENSE: <span>MIT</span></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;min-width:200px">
+        <a href="https://github.com/YOUR-REPO-URL-HERE" class="btn-secondary" target="_blank" rel="noopener" style="text-align:center">⌥ VIEW REPO</a>
+        <a href="game/game.html" class="btn-primary" style="text-align:center">▶ PLAY GAME</a>
+      </div>
+    </div>
+
+    <div class="tech-grid reveal">
+      <div class="tech-card"><div class="tc-title">HTML5</div><div class="tc-sub">Canvas API</div></div>
+      <div class="tech-card"><div class="tc-title">JS ES6+</div><div class="tc-sub">Vanilla</div></div>
+      <div class="tech-card"><div class="tc-title">WEB AUDIO</div><div class="tc-sub">API</div></div>
+      <div class="tech-card"><div class="tc-title">GH PAGES</div><div class="tc-sub">Deployed</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════ -->
+<footer>
+  <div class="school">UPHSD MOLINO — COLLEGE OF COMPUTER STUDIES</div>
+  <div>2ND YEAR IT GAME DEVELOPMENT MAJOR · WST FINAL PROJECT 2025</div>
+  <div style="margin-top:16px;color:var(--green-dim)">
+    GROUP: AGBAN-DACUBA &nbsp;·&nbsp; GENRE: PLATFORMER &nbsp;·&nbsp;
+    <a href="game/game.html">PLAY FROGGO'S LEAP ▶</a>
+  </div>
+</footer>
+
+
+<!-- Smooth scroll + reveal script -->
+<script>
+  // Smooth scroll for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Scroll reveal using IntersectionObserver
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
