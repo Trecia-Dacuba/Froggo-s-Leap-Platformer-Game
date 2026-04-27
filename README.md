@@ -1,25 +1,25 @@
 # 🐸 Froggo's Leap
-### A Lily Pad Platformer — UPHSD CCS WST Final Project 2025
+### A Lily Pad Platformer - UPHSD CCS WST Final Project 2026
 
-> **Group:** Agban-Dacuba &nbsp;|&nbsp; **Genre:** Platformer &nbsp;|&nbsp; **Year:** 2nd Year IT — Game Development Major
-
----
-
-## 🎮 Play the Game
-
-**[▶ Play Froggo's Leap on GitHub Pages](https://YOUR-USERNAME.github.io/froggos-leap/)**
+> **Group:** Agban-Dacuba &nbsp;|&nbsp; **Genre:** Platformer &nbsp;|&nbsp; **Year:** 2nd Year IT - Game Development Major
 
 ---
 
-## 📖 About
+## Play the Game
 
-**Froggo's Leap** is an original HTML5 canvas platformer where you control Froggo — a small, determined frog in a tiny hat — leaping across lily pads above moonlit ponds, mysterious marshes, and volcanic springs.
-
-Built entirely with **vanilla JavaScript + HTML5 Canvas** and the **Web Audio API** — zero external libraries, zero dependencies.
+**[▶ Play Froggo's Leap on GitHub Pages](https://Trecia-Dacuba.github.io/froggos-leap/)**
 
 ---
 
-## 🕹️ Controls
+## About
+
+**Froggo's Leap** is an original HTML5 canvas platformer where you control Froggo - a small, determined frog in a tiny hat - leaping across lily pads above moonlit ponds, mysterious marshes, and volcanic springs.
+
+Built entirely with **vanilla JavaScript + HTML5 Canvas** and the **Web Audio API** - zero external libraries, zero dependencies.
+
+---
+
+## Controls
 
 | Input | Action |
 |---|---|
@@ -31,14 +31,14 @@ Built entirely with **vanilla JavaScript + HTML5 Canvas** and the **Web Audio AP
 | Mobile `▲` | Jump (on-screen button) |
 
 > **Tips:**
-> - **Coyote time** — you can still jump a few frames after walking off a platform
-> - **Jump buffer** — press jump slightly early and it will still register
+> - **Coyote time** - you can still jump a few frames after walking off a platform
+> - **Jump buffer** - press jump slightly early and it will still register
 > - **Stomp hornets** by landing on top of them for +25 points
 > - **Touch checkpoints** (green flags) to save your respawn position
 
 ---
 
-## 🏆 Scoring
+## Scoring
 
 | Action | Points |
 |---|---|
@@ -50,7 +50,7 @@ Built entirely with **vanilla JavaScript + HTML5 Canvas** and the **Web Audio AP
 
 ---
 
-## ⭐ Power-Ups
+## Power-Ups
 
 | Power-Up | Effect | Duration |
 |---|---|---|
@@ -69,7 +69,7 @@ Built entirely with **vanilla JavaScript + HTML5 Canvas** and the **Web Audio AP
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 > *(Replace with actual screenshots — save them to a `screenshots/` folder)*
 
@@ -102,7 +102,7 @@ froggos-leap/
 │   ├── levels.js       ← Level data: platforms, enemies, items
 │   └── game.js         ← Core engine: physics, rendering, input
 │
-├── screenshots/        ← (Add your screenshots here)
+├── screenshots/        
 │   ├── menu.png
 │   ├── level1.png
 │   ├── level2.png
@@ -115,7 +115,7 @@ froggos-leap/
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 | Technology | Usage |
 |---|---|
@@ -127,11 +127,11 @@ froggos-leap/
 
 ---
 
-## 🔧 How to Run Locally
+## How to Run Locally
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/froggos-leap.git
+   git clone https://github.com/Trecia-Dacuba/froggos-leap.git
    cd froggos-leap
    ```
 
@@ -149,9 +149,9 @@ froggos-leap/
 
 ---
 
-## 👥 Team
+## Team
 
-### Agban, [First Name]
+### Dacuba, Trecia Mae R.
 **Role: Game Developer & Lead Programmer**
 - Core game engine and main loop architecture
 - Player physics: gravity, coyote time, jump buffering, squish-and-stretch
@@ -162,11 +162,11 @@ froggos-leap/
 - Particle effects engine
 - Game state machine (menu → playing → level clear → win/game over)
 
-**GitHub:** [github.com/agban](https://github.com/YOUR-USERNAME)
+**GitHub:** [github.com/agban](https://github.com/Trecia-Dacuba)
 
 ---
 
-### Dacuba, [First Name]
+### Agban, Mikaela Mae P.
 **Role: Web Designer & Level Designer**
 - Web portal design (`index.html` + `index.css`)
 - Level design: platform layout, gap distances, enemy placement
@@ -175,28 +175,28 @@ froggos-leap/
 - README documentation
 - Screenshot collection
 
-**GitHub:** [github.com/dacuba](https://github.com/YOUR-USERNAME)
+**GitHub:** [github.com/dacuba](https://github.com/MikaAgban29)
 
 ---
 
-## 📋 Project Info
+## Project Info
 
 | Detail | Value |
 |---|---|
-| **School** | UPHSD Molino — College of Computer Studies |
+| **School** | UPHSD Molino - College of Computer Studies |
 | **Course** | Web Systems & Technologies (WST) |
 | **Year Level** | 2nd Year |
-| **Program** | BS Information Technology — Game Development Major |
+| **Program** | BS Information Technology - Game Development Major |
 | **Sprint Duration** | 14 days |
 | **Submission** | Day 14 Final Defense |
 
 ---
 
-## 📜 License
+## License
 
-MIT License — free to use, modify, and distribute with attribution.
+MIT License - free to use, modify, and distribute with attribution.
 
 ---
 
-*Built with 🐸 by Agban-Dacuba · UPHSD CCS · 2025*
+*Built with 🐸 by Agban-Dacuba · UPHSD CCS · 2026*
 # Froggo-s-Leap-Platformer-Game
