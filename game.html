@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FROGGO'S LEAP — Lily Pad Platformer</title>
+
+  <!-- Game Stylesheet -->
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       GAME WRAPPER
+       Contains canvas + all UI layers
+       ═══════════════════════════════════ -->
+  <div id="wrap">
+
+    <!-- Main game canvas (800×500) -->
+    <canvas id="gc" width="800" height="500"></canvas>
+
+    <!-- ── HUD (Heads-Up Display) ── -->
+    <div id="hud">
+      <div class="hb">SCORE <span id="sHud">0</span></div>
+      <div class="hb" id="flyHud">🪰 <span id="fHud">0</span></div>
+      <div class="hb" id="powerHud">⭐ <span id="pHud">SHIELD</span></div>
+      <div class="hb" id="livHud">❤️❤️❤️</div>
+      <div class="hb">LV<span id="lvHud">1</span>/3</div>
+    </div>
+
+    <!-- ── Overlay (menu / level clear / win / game over) ── -->
+    <div id="overlay">
+      <!-- Filled dynamically by game.js -->
+    </div>
+
+    <!-- ── Mobile D-Pad Controls ── -->
+    <div id="dpad">
+      <div id="dpad-move">
+        <div class="dp" id="dp-left">◀</div>
+        <div class="dp" id="dp-right">▶</div>
+      </div>
+      <div class="dp" id="dpad-jump">▲</div>
+    </div>
+
+  </div><!-- end #wrap -->
+
+  <!-- ═══════════════════════════════════
+       SCRIPTS — load order matters:
+       1. audio.js   (sound engine + BGM)
+       2. levels.js  (level data)
+       3. game.js    (main logic + render)
+       ═══════════════════════════════════ -->
+  <script src="audio.js"></script>
+  <script src="levels.js"></script>
+  <script src="game.js"></script>
+
+</body>
+</html>
