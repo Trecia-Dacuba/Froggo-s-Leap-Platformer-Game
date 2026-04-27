@@ -148,6 +148,7 @@ function update() {
     lcTimer--;
     if (lcTimer <= 0) {
       doFadeTransition(() => {
+        ov.style.display = 'none';
         window.level++;
         initLevel(window.level);
         gameState = 'playing';
@@ -273,7 +274,7 @@ function update() {
 
   /* ══ COLLECT FLIES ══ */
   flyItems.forEach(f => {
-    if (f.collected || !circ(p, f.x, f.y, 18)) return;
+    if (f.collected || !circ(p, f.x, f.y, 38)) return;  // was 18 — much larger pickup radius
     f.collected = true;
     score += 10;
     fliesCollected++;
@@ -285,7 +286,7 @@ function update() {
 
   /* ══ MUSHROOM (speed boost) ══ */
   mushrooms.forEach(m => {
-    if (m.collected || !circ(p, m.x, m.y, 20)) return;
+    if (m.collected || !circ(p, m.x, m.y, 34)) return;  // was 20
     m.collected = true;
     p.boosted   = 360; // 6 seconds
     sfxMushroom();
@@ -296,7 +297,7 @@ function update() {
 
   /* ══ SHIELD STAR ══ */
   shields.forEach(s => {
-    if (s.collected || !circ(p, s.x, s.y, 20)) return;
+    if (s.collected || !circ(p, s.x, s.y, 34)) return;  // was 20
     s.collected    = true;
     p.shielded     = 1;
     p.shieldTimer  = 480; // 8 seconds
@@ -991,8 +992,10 @@ function showGameOver() {
 function startGame() {
   initAC();
   score = 0; lives = 3; window.level = 1; fliesCollected = 0;
-  ov.style.display = 'none';
+  // Fully reset fade state so a second play-through never starts blacked out
   fadeAlpha = 0; fadeDir = 0; pendingLevel = null;
+  lcTimer = 0;
+  ov.style.display = 'none';
   initLevel(1);
   gameState = 'playing';
   stopBGM(); startBGM();
