@@ -63,9 +63,9 @@ Built entirely with **vanilla JavaScript + HTML5 Canvas** and the **Web Audio AP
 
 | Level | Name | New Elements |
 |---|---|---|
-| 1 | **Pond at Dusk** | Static lily pads, intro enemies |
-| 2 | **Moonlit Marsh** | Slow moving platforms, more hornets |
-| 3 | **Volcanic Springs** | Fast moving platforms, tight gaps |
+| 1 | **Moonlit Swamp** | Static lily pads, intro enemies |
+| 2 | **Crystal Cavern** | Moving platforms, more hornets |
+| 3 | **Volcanic Sky** | Fast moving platforms, tight gaps |
 
 ---
 
@@ -92,17 +92,15 @@ Built entirely with **vanilla JavaScript + HTML5 Canvas** and the **Web Audio AP
 ```
 froggos-leap/
 │
-├── index.html          ← Web portal landing page
-├── index.css           ← Portal stylesheet
-│
+├── index.html
+├── index.css
+├── 404.html
 ├── game/
-│   ├── game.html       ← Game entry point (open this to play)
-│   ├── game.css        ← Game UI styles (HUD, overlays, d-pad)
-│   ├── audio.js        ← Web Audio engine: BGM + all SFX
-│   ├── levels.js       ← Level data: platforms, enemies, items
-│   └── game.js         ← Core engine: physics, rendering, input
+│   ├── game.html      ← Game entry point (open this to play)
+│   ├── style.css       ← All styles: HUD, overlays, d-pad, animations
+│   └── game.js         ← Full game engine: audio, levels, physics, rendering, input
 │
-├── screenshots/        
+├── screenshots/
 │   ├── menu.png
 │   ├── level1.png
 │   ├── level2.png
@@ -123,7 +121,7 @@ froggos-leap/
 | **Vanilla JavaScript ES6+** | Game engine, physics, collision detection, state machine |
 | **Web Audio API** | Procedural chiptune BGM (3 unique per-level tracks) + 10+ SFX |
 | **CSS3** | HUD, overlay screens, mobile d-pad, animations, responsive layout |
-| **GitHub Pages** | Free static hosting for the web portal and game |
+| **GitHub Pages** | Free static hosting for the game |
 
 ---
 
@@ -135,7 +133,7 @@ froggos-leap/
    cd froggos-leap
    ```
 
-2. **Open with a local server** *(required for the separate JS files to load)*
+2. **Open with a local server** *(recommended for best compatibility)*
 
    Using Python:
    ```bash
@@ -145,7 +143,7 @@ froggos-leap/
 
    Or use the **Live Server** extension in VS Code.
 
-3. **Or just open `game/game.html` directly** in your browser — the game works as a standalone file too.
+3. **Or just open `game/index.html` directly** in your browser — the game works as a standalone file too.
 
 ---
 
@@ -162,20 +160,20 @@ froggos-leap/
 - Particle effects engine
 - Game state machine (menu → playing → level clear → win/game over)
 
-**GitHub:** [github.com/agban](https://github.com/Trecia-Dacuba)
+**GitHub:** [github.com/Trecia-Dacuba](https://github.com/Trecia-Dacuba)
 
 ---
 
 ### Agban, Mikaela Mae P.
 **Role: Web Designer & Level Designer**
-- Web portal design (`index.html` + `index.css`)
 - Level design: platform layout, gap distances, enemy placement
 - Visual art direction: color themes, parallax backgrounds
+- CSS styling: HUD, overlays, d-pad, responsive layout
 - GitHub Pages setup and deployment
 - README documentation
 - Screenshot collection
 
-**GitHub:** [github.com/dacuba](https://github.com/MikaAgban29)
+**GitHub:** [github.com/MikaAgban29](https://github.com/MikaAgban29)
 
 ---
 
@@ -199,4 +197,3 @@ MIT License - free to use, modify, and distribute with attribution.
 ---
 
 *Built with 🐸 by Agban-Dacuba · UPHSD CCS · 2026*
-# Froggo-s-Leap-Platformer-Game
