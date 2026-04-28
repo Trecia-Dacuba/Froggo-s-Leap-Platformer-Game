@@ -207,6 +207,18 @@ const ctx = cv.getContext('2d');
 const W   = 800;
 const H   = 500;
 
+/* Scale the canvas pixel buffer by devicePixelRatio so it renders
+   at the screen's native resolution — no blurry upscaling.
+   All game logic still uses W=800 / H=500 coordinates unchanged. */
+(function setupHiDPI() {
+  const dpr = window.devicePixelRatio || 1;
+  cv.width  = W * dpr;
+  cv.height = H * dpr;
+  cv.style.width  = W + 'px';
+  cv.style.height = H + 'px';
+  ctx.scale(dpr, dpr);
+})();
+
 /* ═══════════════════ GLOBAL STATE ═══════════════════ */
 let gameState = 'menu';
 window.level  = 1;
@@ -1006,3 +1018,31 @@ function loop() {
 
 showMenu();
 loop();
+
+/* ═══════════════════ SHARP SCALING ═══════════════════
+   The wrapper is scaled via CSS transform to fill the screen
+   while the canvas always renders at its native DPR resolution.
+   Game logic coordinates (W=800, H=500) never change.
+═══════════════════════════════════════════════════════ */
+function resizeGame() {
+  const dpr    = window.devicePixelRatio || 1;
+  const GAME_W = 800;
+  const GAME_H = 500;
+
+  /* Re-apply DPR scale on the canvas buffer in case DPR changed
+     (e.g. moving window between displays) */
+  cv.width  = GAME_W * dpr;
+  cv.height = GAME_H * dpr;
+  cv.style.width  = GAME_W + 'px';
+  cv.style.height = GAME_H + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  /* Scale wrapper to fill the viewport, keeping 16:10 aspect ratio */
+  const scaleX = window.innerWidth  / GAME_W;
+  const scaleY = window.innerHeight / GAME_H;
+  const scale  = Math.min(scaleX, scaleY);
+  document.getElementById('wrapper').style.transform = `scale(${scale})`;
+}
+
+window.addEventListener('resize', resizeGame);
+resizeGame(); /* Run once on load */

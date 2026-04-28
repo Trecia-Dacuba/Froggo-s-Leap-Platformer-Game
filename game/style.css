@@ -11,6 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   font-family: 'Courier New', monospace;
@@ -20,10 +21,17 @@ body {
   position: relative;
   width: 800px;
   height: 500px;
+  /* Scale up to fill the screen while keeping 800x500 aspect ratio.
+     transform-origin stays center so it scales from the middle.
+     The JS resize handler updates this scale value dynamically. */
+  transform-origin: center center;
 }
 
 #gc {
   display: block;
+  /* Canvas CSS size always matches its internal resolution (800x500).
+     Scaling is handled by the wrapper transform — never stretch the canvas itself.
+     devicePixelRatio is applied in JS so the buffer renders at native screen resolution. */
   width: 800px;
   height: 500px;
 }
@@ -230,10 +238,5 @@ body {
 }
 
 /* ═══════════════════ RESPONSIVE ═══════════════════ */
-@media (max-width: 820px) {
-  #wrapper,
-  #gc {
-    width: 100vw;
-    height: calc(100vw * 0.625);
-  }
-}
+/* Wrapper and canvas stay at 800x500 — JS scale() handles fitting any screen size.
+   No CSS resizing needed here; it would fight the transform and cause blur. */
