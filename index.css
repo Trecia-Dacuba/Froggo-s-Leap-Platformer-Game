@@ -93,7 +93,7 @@ nav {
   text-align: center;
   padding: 80px 40px 60px;
   position: relative;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .hero-bg {

@@ -63,7 +63,7 @@
         <p>
           <span>Froggo's Leap</span> is an original HTML5 canvas platformer
           built for the UPHSD College of Computer Studies WST Final Project.
-          Play as Froggo — a determined little frog in a tiny hat — leaping
+          Play as Froggo - a determined little frog in a tiny hat - leaping
           across lily pads above a moonlit pond.
         </p>
         <p>
@@ -75,7 +75,7 @@
         <p>
           Built entirely in <span>vanilla JavaScript + HTML5 Canvas</span>
           with procedurally generated chiptune BGM and Web Audio API
-          sound effects — zero external libraries, zero dependencies.
+          sound effects - zero external libraries, zero dependencies.
         </p>
         <a href="game/game.html" class="btn-primary" style="margin-top:8px; display:inline-block">▶ PLAY NOW</a>
       </div>
@@ -226,7 +226,7 @@
               <tr><th>ACTION</th><th>POINTS</th></tr>
             </thead>
             <tbody>
-              <tr><td>Collect a fly 🪰</td><td>+10</td></tr>
+              <tr><td>Collect a fly</td><td>+10</td></tr>
               <tr><td>Stomp a hornet 🐝</td><td>+25</td></tr>
               <tr><td>Reach the lotus 🌸</td><td>+100 base</td></tr>
               <tr><td>Level bonus</td><td>+50 per level</td></tr>
@@ -404,7 +404,7 @@
      FOOTER
      ══════════════════════════════════════ -->
 <footer>
-  <div class="school">UPHSD MOLINO — COLLEGE OF COMPUTER STUDIES</div>
+  <div class="school">UPHSD MOLINO - COLLEGE OF COMPUTER STUDIES</div>
   <div>2ND YEAR IT GAME DEVELOPMENT MAJOR · FINAL PROJECT 2026</div>
   <div style="margin-top:16px;color:var(--green-dim)">
     GROUP: AGBAN-DACUBA &nbsp;·&nbsp; GENRE: PLATFORMER &nbsp;·&nbsp;
@@ -415,12 +415,15 @@
 
 <!-- Smooth scroll + reveal script -->
 <script>
-  // Smooth scroll for all anchor links
+  // Smooth scroll for all anchor links — offset for fixed nav (56px)
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
       const target = document.querySelector(a.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - 56;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
     });
   });
 
